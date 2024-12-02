@@ -1,0 +1,33 @@
+import React from "react";
+import styled from "styled-components";
+function Chat() {
+  const handleUserLogout = () => {
+    localStorage.removeItem("chatAppUser");
+  };
+  return (
+    <>
+      <Container>
+        <div className="contianer"></div>
+        <button onClick={handleUserLogout}> Logout</button>
+      </Container>
+    </>
+  );
+}
+
+const Container = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  background-color: #131324;
+  .container {
+    height: 85vh;
+    width: 85vw;
+    background-color: #00000076;
+  }
+`;
+
+export default Chat;
